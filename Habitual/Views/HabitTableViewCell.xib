@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,8 +19,38 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYC-XJ-xWU">
+                        <rect key="frame" x="0.0" y="0.0" width="151" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GW-H0-8wL">
+                        <rect key="frame" x="171" y="0.0" width="149" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="149" id="7LH-sj-PSp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bYC-XJ-xWU" firstAttribute="firstBaseline" secondItem="8GW-H0-8wL" secondAttribute="firstBaseline" id="2cI-4Z-D3W"/>
+                    <constraint firstItem="bYC-XJ-xWU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4kX-O3-0x6"/>
+                    <constraint firstItem="8GW-H0-8wL" firstAttribute="leading" secondItem="bYC-XJ-xWU" secondAttribute="trailing" constant="20" id="9Qk-qL-Oe7"/>
+                    <constraint firstItem="bYC-XJ-xWU" firstAttribute="baseline" secondItem="8GW-H0-8wL" secondAttribute="baseline" id="LPb-hW-cEC"/>
+                    <constraint firstItem="bYC-XJ-xWU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MET-AH-b0g"/>
+                    <constraint firstItem="bYC-XJ-xWU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WBM-Tb-ZZV"/>
+                    <constraint firstAttribute="trailing" secondItem="8GW-H0-8wL" secondAttribute="trailing" id="cTy-r6-sR1"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="myLabel1" destination="bYC-XJ-xWU" id="TYm-CX-BIV"/>
+                <outlet property="myLabel2" destination="8GW-H0-8wL" id="OHY-8J-mE3"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
