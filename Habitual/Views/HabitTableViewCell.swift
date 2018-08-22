@@ -13,6 +13,7 @@ class HabitTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        // Add more stuff here
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
