@@ -59,7 +59,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     // Configure the cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "habitCell") as! HabitTableViewCell
-        
+        cell.myLabel.text = "Row \(indexPath.row)"
         return cell
     }
     
