@@ -71,8 +71,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         
         let dict = usersArray[indexPath.row]
         
-        cell.myLabel1.text = "Row \(dict["first_name"])"
-        cell.myLabel2.text = "Row \(dict["last_name"])"
+        cell.myLabel1.text = "First Name: \(dict["first_name"]!)"
+        cell.myLabel2.text = "Last Name: \(dict["last_name"]!)"
         return cell
     }
     
